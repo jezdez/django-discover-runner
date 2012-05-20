@@ -84,4 +84,12 @@ one level deep::
 
 Other than that it's similar to the new project's style configuration.
 
+Thanks
+------
+
+This test runner is a humble rip-off of Carl Meyer's ``DiscoveryRunner``
+which he published as a gist_ a while ago. All praise should be directed at
+him. Thanks, Carl!
+
 .. _unittest2: http://pypi.python.org/pypi/unittest2
+.. _gist: https://gist.github.com/1450104
