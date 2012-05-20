@@ -22,8 +22,7 @@ test discovery in all submodules of that package.
 Settings
 --------
 
-First you need to point the ``TEST_RUNNER`` setting to the ``DiscoverRunner``
-class to enable it::
+``TEST_RUNNER`` needs to point to the ``DiscoverRunner`` class to enable it::
 
     TEST_RUNNER = 'discover_runner.DiscoverRunner'
 
