@@ -22,21 +22,22 @@ test discovery in all submodules of that package.
 Settings
 --------
 
-``TEST_RUNNER`` needs to point to the ``DiscoverRunner`` class to enable it::
+- ``TEST_RUNNER`` (required) needs to point to the ``DiscoverRunner`` class
+  to enable it::
 
     TEST_RUNNER = 'discover_runner.DiscoverRunner'
 
-``TEST_DISCOVER_ROOT`` should be the root directory to discover tests
-within. You could make this the same as ``TEST_DISCOVER_TOP_LEVEL`` if you
-want tests to be discovered anywhere in your project or app.
+- ``TEST_DISCOVER_ROOT`` (optional) should be the root directory to discover
+  tests within. You could make this the same as ``TEST_DISCOVER_TOP_LEVEL``
+  if you want tests to be discovered anywhere in your project or app.
 
-``TEST_DISCOVER_TOP_LEVEL`` should be the directory containing your top-level
-package(s); in other words, the directory that should be on ``sys.path`` for
-your code to import. This is the directory containing ``manage.py`` in the new
-Django 1.4 project layout.
+- ``TEST_DISCOVER_TOP_LEVEL`` (optional) should be the directory containing
+  your top-level package(s); in other words, the directory that should be on
+  ``sys.path`` for your code to import. This is the directory containing
+  ``manage.py`` in the new Django 1.4 project layout.
 
-``TEST_DISCOVER_PATTERN`` is the pattern to use when discovering tests and
-defaults to the unittest2_ standard ``test*.py``.
+- ``TEST_DISCOVER_PATTERN`` (optional) is the pattern to use when discovering
+  tests and defaults to the unittest2_ standard ``test*.py``.
 
 Examples
 --------
