@@ -41,7 +41,7 @@ django-discover-runner allows you to specify any type of label to Django's
 test management command.
 
 By default Django's test runner will execute the tests of Django's own
-contrib app tests, which doesn't make sense if you just want to run your
+contrib apps, which doesn't make sense if you just want to run your
 own app's or project's tests. django-discover-runner fixes this by allowing
 you to specify which tests to run and organize your test code outside the
 reach of the Django test runner.
