@@ -19,6 +19,39 @@ test discovery in all submodules of that package.
     only searches for tests in files named ``test*.py``. To override this
     see the ``TEST_DISCOVER_PATTERN`` setting below.
 
+Why?
+----
+
+Django's own test discovery is very much tied to the directory structure
+of Django apps, partly due to historic reasons (the unittest library
+didn't have its own discovery for a long time) and prevents Django app
+authors from being good Python citizens. django-discover-runner uses the
+official test discovery feature of the new unittest2_ library which is
+included in Django.
+
+By default there is no way to put project specific tests in a separate
+folder outside the Python package of the Django project, which is a great
+way to organize your code, separating the tests and non-test code.
+django-discover-runner helps you clean up your project tests.
+
+There is also no way to specify fully dotted import paths to test
+modules, functions, class or methods to the ``test`` management command
+but only Django's odd standard ``<appname>.<TestClassName>``.
+django-discover-runner allows you to specify any type of label to Django's
+test management command.
+
+By default Django's test runner will execute the tests of Django's own
+contrib app tests, which doesn't make sense if you just want to run your
+own app's or project's tests. django-discover-runner fixes this by allowing
+you to specify which tests to run and organize your test code outside the
+reach of the Django test runner.
+
+More reasons can be found in Carl Meyer's excellent talk about
+`Testing and Django`_ (slides_).
+
+.. _`Testing and Django`: http://pyvideo.org/video/699/testing-and-django
+.. _slides: http://carljm.github.com/django-testing-slides/
+
 Settings
 --------
 
@@ -91,5 +124,9 @@ This test runner is a humble rip-off of Carl Meyer's ``DiscoveryRunner``
 which he published as a gist_ a while ago. All praise should be directed at
 him. Thanks, Carl!
 
+This is also very much related to ticket #17365_ and is hopefully useful
+in replacing the default test runner in Django.
+
 .. _unittest2: http://pypi.python.org/pypi/unittest2
 .. _gist: https://gist.github.com/1450104
+.. _#17365: https://code.djangoproject.com/ticket/17365
