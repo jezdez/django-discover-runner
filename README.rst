@@ -124,9 +124,9 @@ This test runner is a humble rip-off of Carl Meyer's ``DiscoveryRunner``
 which he published as a gist_ a while ago. All praise should be directed at
 him. Thanks, Carl!
 
-This is also very much related to ticket #17365_ and is hopefully useful
+This is also very much related to ticket `#17365`_ and is hopefully useful
 in replacing the default test runner in Django.
 
 .. _unittest2: http://pypi.python.org/pypi/unittest2
 .. _gist: https://gist.github.com/1450104
-.. _#17365: https://code.djangoproject.com/ticket/17365
+.. _`#17365`: https://code.djangoproject.com/ticket/17365
