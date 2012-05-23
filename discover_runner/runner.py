@@ -14,7 +14,7 @@ class DiscoverRunner(DjangoTestSuiteRunner):
     """
     def build_suite(self, test_labels, extra_tests=None, **kwargs):
         suite = None
-        root = getattr(settings, 'TEST_root', '.')
+        root = getattr(settings, 'TEST_DISCOVER_ROOT', '.')
         top_level = getattr(settings, 'TEST_DISCOVER_TOP_LEVEL', None)
         pattern = getattr(settings, 'TEST_DISCOVER_PATTERN', 'test*.py')
 
