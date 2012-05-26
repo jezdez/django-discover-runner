@@ -1,9 +1,19 @@
 import os
 from django.conf import settings
+from django.core.exceptions import ImproperlyConfigured
 from django.test import TestCase
 from django.test.simple import DjangoTestSuiteRunner, reorder_suite
 from django.utils.importlib import import_module
-from django.utils.unittest.loader import defaultTestLoader
+
+try:
+    from django.utils.unittest.loader import defaultTestLoader
+except ImportError:
+    try:
+        from unittest2.loader import defaultTestLoader  # noqa
+    except ImportError:
+        raise ImproperlyConfigured("Couldn't import unittest2 default "
+                                   "test loader. Please use Django >= 1.3 "
+                                   "or install the unittest2 library.")
 
 
 class DiscoverRunner(DjangoTestSuiteRunner):
