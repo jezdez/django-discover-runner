@@ -52,8 +52,19 @@ More reasons can be found in Carl Meyer's excellent talk about
 .. _`Testing and Django`: http://pyvideo.org/video/699/testing-and-django
 .. _slides: http://carljm.github.com/django-testing-slides/
 
-Settings
---------
+Installation
+------------
+
+Install it with your favorite installer, e.g.::
+
+    pip install -U django-discover-runner
+
+If you're using **Django < 1.3** you also have to install unittest2_::
+
+    pip install unittest2
+
+Setup
+-----
 
 - ``TEST_RUNNER`` (required) needs to point to the ``DiscoverRunner`` class
   to enable it::
@@ -116,6 +127,26 @@ one level deep::
     TEST_DISCOVER_ROOT = path.join(TEST_DISCOVER_TOP_LEVEL, 'tests')
 
 Other than that it's similar to the new project's style configuration.
+
+Changelog
+---------
+
+0.2 05/26/2012
+^^^^^^^^^^^^^^
+
+* Added ability to use an optionally installed unittest2 library
+  for Django projects using Django < 1.3 (which added unittest2 to the
+  ``django.utils.unittest`` package).
+
+0.1.1 05/23/2012
+^^^^^^^^^^^^^^^^
+
+* Fixed a bug that prevented the project based feature to work correctly.
+
+0.1 05/20/2012
+^^^^^^^^^^^^^^
+
+* Initial release with support for Django >= 1.3.
 
 Thanks
 ------
