@@ -131,6 +131,13 @@ Other than that it's similar to the new project's style configuration.
 Changelog
 ---------
 
+0.2.1 08/20/2012
+^^^^^^^^^^^^^^^^
+
+* Fixed a rather esoteric bug with testing test case class methods
+  that was caused by a wrong import and the way Django wraps itself
+  around the unittest2 module (if availale) or unittest on Python >= 2.7.
+
 0.2 05/26/2012
 ^^^^^^^^^^^^^^
 
