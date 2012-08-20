@@ -6,10 +6,10 @@ from django.test.simple import DjangoTestSuiteRunner, reorder_suite
 from django.utils.importlib import import_module
 
 try:
-    from django.utils.unittest.loader import defaultTestLoader
+    from django.utils.unittest import defaultTestLoader
 except ImportError:
     try:
-        from unittest2.loader import defaultTestLoader  # noqa
+        from unittest2 import defaultTestLoader  # noqa
     except ImportError:
         raise ImproperlyConfigured("Couldn't import unittest2 default "
                                    "test loader. Please use Django >= 1.3 "
