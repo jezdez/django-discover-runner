@@ -1,4 +1,3 @@
-import os
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from django.test import TestCase
@@ -34,7 +33,6 @@ class DiscoverRunner(DjangoTestSuiteRunner):
             if not suite.countTestCases() and len(test_labels) == 1:
                 suite = None
                 root = import_module(test_labels[0]).__path__[0]
-                top_level = os.path.dirname(root)
 
         if suite is None:
             suite = defaultTestLoader.discover(root,

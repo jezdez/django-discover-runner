@@ -131,6 +131,13 @@ Other than that it's similar to the new project's style configuration.
 Changelog
 ---------
 
+0.2.2 09/04/2012
+^^^^^^^^^^^^^^^^
+
+* Stopped setting the top level variable in the case of using a module path
+  as the test label as it made the wrong assumption that the parent directory
+  *is* the top level.
+
 0.2.1 08/20/2012
 ^^^^^^^^^^^^^^^^
 
