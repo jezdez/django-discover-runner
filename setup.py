@@ -5,7 +5,8 @@ from setuptools import setup, find_packages
 
 
 def read(*parts):
-    return codecs.open(path.join(path.dirname(__file__), *parts)).read()
+    file_path = path.join(path.dirname(__file__), *parts)
+    return codecs.open(file_path, encoding='utf-8').read()
 
 
 def find_version(*file_paths):
@@ -38,5 +39,7 @@ setup(
         'Programming Language :: Python :: 2.5',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
     ],
 )
