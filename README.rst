@@ -131,6 +131,12 @@ Other than that it's similar to the new project's style configuration.
 Changelog
 ---------
 
+0.3 01/28/2013
+^^^^^^^^^^^^^^
+
+* Fixed setup.py to work on Python 3. This should make this app compatible
+  to Python 3.
+
 0.2.2 09/04/2012
 ^^^^^^^^^^^^^^^^
 
