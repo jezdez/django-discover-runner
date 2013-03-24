@@ -83,6 +83,9 @@ Setup
 - ``TEST_DISCOVER_PATTERN`` (optional) is the pattern to use when discovering
   tests and defaults to the unittest2_ standard ``test*.py``.
 
+- Add `'discover_runner'` to your ``INSTALLED_APPS`` setting to enable the
+  ability to override the settings above using the ``test`` management command.
+
 Examples
 --------
 
@@ -130,6 +133,12 @@ Other than that it's similar to the new project's style configuration.
 
 Changelog
 ---------
+
+0.4 XX/XX/XXXX
+^^^^^^^^^^^^^^
+
+* Added ability to override the discover settings with a custom test management
+  command.
 
 0.3 01/28/2013
 ^^^^^^^^^^^^^^
