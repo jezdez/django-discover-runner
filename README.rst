@@ -71,7 +71,7 @@ Setup
 
     TEST_RUNNER = 'discover_runner.DiscoverRunner'
 
-- Add `'discover_runner'` to your ``INSTALLED_APPS`` setting to enable the
+- Add ``'discover_runner'`` to your ``INSTALLED_APPS`` setting to enable the
   ability to override the discovery settings below when using the ``test``
   management command.
 
