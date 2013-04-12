@@ -71,20 +71,24 @@ Setup
 
     TEST_RUNNER = 'discover_runner.DiscoverRunner'
 
+- Add `'discover_runner'` to your ``INSTALLED_APPS`` setting to enable the
+  ability to override the discovery settings below when using the ``test``
+  management command.
+
 - ``TEST_DISCOVER_ROOT`` (optional) should be the root directory to discover
   tests within. You could make this the same as ``TEST_DISCOVER_TOP_LEVEL``
-  if you want tests to be discovered anywhere in your project or app.
+  if you want tests to be discovered anywhere in your project or app. The
+  management command option is called ``--root``.
 
 - ``TEST_DISCOVER_TOP_LEVEL`` (optional) should be the directory containing
   your top-level package(s); in other words, the directory that should be on
   ``sys.path`` for your code to import. This is the directory containing
-  ``manage.py`` in the new Django 1.4 project layout.
+  ``manage.py`` in the new Django 1.4 project layout. The management command
+  option is called ``--top-level``.
 
 - ``TEST_DISCOVER_PATTERN`` (optional) is the pattern to use when discovering
-  tests and defaults to the unittest2_ standard ``test*.py``.
-
-- Add `'discover_runner'` to your ``INSTALLED_APPS`` setting to enable the
-  ability to override the settings above using the ``test`` management command.
+  tests and defaults to the unittest2_ standard ``test*.py``. The management
+  command option is called ``--pattern``.
 
 Examples
 --------
@@ -134,7 +138,7 @@ Other than that it's similar to the new project's style configuration.
 Changelog
 ---------
 
-0.4 XX/XX/XXXX
+0.4 04/12/2013
 ^^^^^^^^^^^^^^
 
 * Added ability to override the discover settings with a custom test management
