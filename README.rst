@@ -99,7 +99,7 @@ Django app
 To test a reusable Django app it's recommended to add a ``test_settings.py``
 file to your app package to easily run the app tests with the ``test``
 management command. Simply set the ``TEST_RUNNER`` setting to
-``'discover_runner.DiscoverRunner'``, configure the other settings neccesary
+``'discover_runner.DiscoverRunner'``, configure the other settings necessary
 to run your tests and call the ``test`` management command with the name of
 the app package, e.g.:: 
 
